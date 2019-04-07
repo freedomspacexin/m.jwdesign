@@ -74,6 +74,11 @@
 }
 </script>
 <style scoped>
+
+.product-content{
+    min-height:200px; 
+}
+
 .product-items{
     padding: 0px 4%;
 }

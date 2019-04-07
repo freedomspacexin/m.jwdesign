@@ -1,34 +1,34 @@
 <template>
     <div>
            <top-search></top-search>
-           <my-swiper class="mt-40" url="home_banner.json"></my-swiper>
+          <my-swiper class="mt-40" url="home_banner.json"></my-swiper>
            <category-title title="设计风格"></category-title>
            <nav class="design-style-container">
 		        <ul class="design-style_wrapper clearfix">
-		            <li><a href="javascript:;" data-id="#new-product">
+		            <li><a href="javascript:;" data-id="#new-product" @click="goSimplest">
 		            	<img src="../../assets/images/design_style01.png">
 		            	<h5>简约</h5>
 		            </a></li>
-		            <li><a href="javascript:;" data-id="#birthday-product">
+		            <li><a href="javascript:;" data-id="#birthday-product" @click="goModern">
 		            	<img src="../../assets/images/design_style02.png">
 		            	<h5>现代</h5>
 		            </a></li>
-		            <li><a href="javascript:;" data-id="#children-product">
+		            <li><a href="javascript:;" data-id="#children-product" @click="goRestore">
 		            	<img src="../../assets/images/design_style03.png">
 		            	<h5>复古</h5>
 		            </a></li>
-		            <li><a href="javascript:;" data-id="#party-product">
+		            <li><a href="javascript:;" data-id="#party-product" @click="goMashup">
 		            	<img src="../../assets/images/design_style04.png">
 		            	<h5>混搭</h5>
 		            </a></li>      
 		        </ul>
     	   </nav>
     	   <category-title></category-title>
-           <section class="product-list">
-               <product-items title="简约" url="products-simplest-list.json"></product-items>
-               <product-items title="现代" url="products-modern-list.json"></product-items>
-               <product-items title="复古" url="products-restore-list.json"></product-items>
-               <product-items title="混搭" url="products-mashup-list.json"></product-items>
+         <section class="product-list">
+               <product-items ref="simplest" title="简约" url="products-simplest-list.json"></product-items>
+               <product-items ref="modern" title="现代" url="products-modern-list.json"></product-items>
+               <product-items ref="restore" title="复古" url="products-restore-list.json"></product-items>
+               <product-items ref="mashup" title="混搭" url="products-mashup-list.json"></product-items>
            </section>
            <category-title title="经典小户型"></category-title>
            <right-swiper class="content-container" url="products-small-style-list.json"></right-swiper>
@@ -44,6 +44,54 @@
      export default {
             components:{
               productItems:productItems
+            },
+            methods:{
+                goSimplest(){
+                  this.myScrollTo({toT:this.$refs.simplest.$el.offsetTop-50});
+                },
+                goModern(){
+                  this.myScrollTo({toT:this.$refs.modern.$el.offsetTop-50});
+                },
+                goRestore(){
+                  this.myScrollTo({toT:this.$refs.restore.$el.offsetTop-50});
+                },
+                goMashup(){
+                  this.myScrollTo({toT:this.$refs.mashup.$el.offsetTop-50});
+                },
+                myScrollTo(options){
+                  var defaults = {
+                      toT : 0,    //滚动目标位置
+                      durTime : 500,  //过渡动画时间
+                      delay : 30,     //定时器时间
+                      callback:null   //回调函数
+                  };
+                  var opts = Object.assign(defaults,options)
+                  var timer = null
+                  var _this = this
+                  //var curTop = _this.scrollTop()//滚动条当前的位置
+                  var curTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0
+                  var subTop = opts.toT - curTop    //滚动条目标位置和当前位置的差值
+                  var index = 0
+                  var dur = Math.round(opts.durTime / opts.delay)
+                  var smoothScroll = function(t){
+                      index++;
+                      var per = Math.round(subTop/dur);
+                      if(index >= dur){
+                          window.scrollTo(0,t);
+                          window.clearInterval(timer);
+                          if(opts.callback && typeof opts.callback == 'function'){
+                              opts.callback();
+                          }
+                          return;
+                      }else{
+                          window.scrollTo(0,curTop + index*per);
+                      }
+                  };
+                  timer = window.setInterval(function(){
+                      smoothScroll(opts.toT);
+                  }, opts.delay);
+                  return _this;
+                },
             }
      }
 </script>

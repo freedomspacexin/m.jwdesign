@@ -10,19 +10,19 @@
               <span class="icomoon_font icomoon_font_home"></span>
               <span class="mui-tab-label">首页</span>
           </router-link>
-          <router-link class="mui-tab-item" :to="{name:'member'}">
+          <router-link class="mui-tab-item" :to="{name:'Category'}">
               <span class="icomoon_font icomoon_font_category"></span>
               <span class="mui-tab-label">分类</span>
           </router-link>
-          <router-link class="mui-tab-item" :to="{name:'shopcart'}">
+          <router-link class="mui-tab-item" :to="{name:'Activity'}">
               <span class="icomoon_font icomoon_font_active"><span class="mui-badge"></span></span>
               <span class="mui-tab-label">活动</span>
           </router-link>
-          <router-link class="mui-tab-item" :to="{name:'search'}">
+          <router-link class="mui-tab-item" :to="{name:'Cart'}">
               <span class="icomoon_font icomoon_font_cart"></span>
               <span class="mui-tab-label">购物车</span>
           </router-link>
-          <router-link class="mui-tab-item" :to="{name:'search'}">
+          <router-link class="mui-tab-item" :to="{name:'Personal'}">
               <span class="icomoon_font icomoon_font_personal"></span>
               <span class="mui-tab-label">个人中心</span>
           </router-link>
@@ -31,9 +31,13 @@
     </div>
 </template>
 <script>
-    // export default {
-
-    // }
+    export default {
+        mounted(){
+          mui('body').on('tap','a',function(){
+            window.location.href = this.href
+          })
+        }
+    }
 </script>
 <style>
 /*过渡动画*/

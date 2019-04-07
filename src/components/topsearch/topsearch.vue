@@ -21,7 +21,6 @@
     width: 100%;
     min-width: 320px;
     max-width: 640px;
-    height: 1000px;
     margin: 0 auto;
 }
 
@@ -52,7 +51,7 @@
     position: absolute;
     width: 60px;
     height: 40px;
-    left: 10px;
+    left: 0px;
     top: 0;
     font-size: 0;
     z-index: 1;
@@ -72,7 +71,7 @@
 
 .jw_search .jw_search_box form {
     position: absolute;
-    padding-left: 70px;
+    padding-left: 60px;
     padding-right: 50px;
     left: 0;
     top: 0;
@@ -82,7 +81,7 @@
 
 .jw_search .jw_search_box .icon_search {
     position: absolute;
-    left: 79px;
+    left: 68px;
     top: 12px;
 }
 
@@ -91,7 +90,7 @@
     margin-top: 5px;
     height: 30px;
     border-radius: 15px;
-    padding-left: 40px;
+    padding-left: 30px;
     background: #fff;
 }
 </style>

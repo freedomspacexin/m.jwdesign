@@ -39,7 +39,11 @@
 }
 
 .mui-bar-tab .mui-tab-item.mui-active {
-    color: #007aff;
+    color: #ffc428;
+}
+
+.mui-bar-tab .mui-tab-item.router-link-exact-active{
+    color: #ffc428;
 }
 
 .mui-bar-tab .mui-tab-item .icomoon_font {
@@ -119,7 +123,13 @@
 
 .icomoon_font_personal::before{
   content: "\e7fd";
+}
 
+.icomoon_font_menu::before{
+  content: "\e5d2";
+}
+.icomoon_font_back::before{
+  content: "\e408";
 }
 
 .mint-swipe .mint-swipe-indicators {

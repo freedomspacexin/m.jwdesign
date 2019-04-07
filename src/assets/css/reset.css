@@ -159,4 +159,6 @@ body {
 *::after{
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  tap-highlight-color: transparent;/*移动端点击高亮为透明*/
+  -webkit-tap-highlight-color: transparent;
 }

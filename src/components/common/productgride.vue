@@ -62,6 +62,6 @@ export default{
 }
 .product-gride h3{
     padding: 5px 5px;
-    text-align: right;
+    text-align: center;
 }
 </style>

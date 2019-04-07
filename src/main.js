@@ -10,6 +10,7 @@ Vue.config.productionTip = false
 import Mint from 'mint-ui'
 import 'mint-ui/lib/style.css'
 import 'swiper/dist/css/swiper.css';
+import '../static/lib/mui/css/mui.css';
 //全部安装组件，实际开发要求为按需配置安装组件
 Vue.use(Mint)
 

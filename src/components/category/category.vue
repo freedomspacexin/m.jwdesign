@@ -15,42 +15,104 @@
                 <div class="first-category-left mui-scroll-wrapper">  
                     <div class="mui-scroll">  
                         <ul class="datalist mui-clearfix">  
-                            <li>列表数据 111</li>  
-                            <li>列表数据 222</li>  
-                            <li>列表数据 333</li>  
-                            <li>列表数据 444</li>  
-                            <li>列表数据 555</li>  
-                            <li>列表数据 666</li>  
-                            <li>列表数据 777</li>  
-                            <li>列表数据 888</li>  
-                            <li>列表数据 999</li>  
-                            <li>列表数据 1010</li>  
-                            <li>列表数据 1111</li>  
-                            <li>列表数据 1212</li>  
-                            <li>列表数据 1313</li>  
-                            <li>列表数据 1414</li>  
-                            <li>列表数据 1515</li>  
+                            <li class="category-title">
+                                <img src="../../assets/images/guan_bangzhu.png"/>
+                                <span>设计风格</span>
+                            </li>  
+                            <li class="category-item now">
+                                <router-link :to="{name:'category_items',query:{dataId:1}}">简约</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:2}}">现代</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:3}}">复古</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:4}}">混搭</router-link>
+                            </li>  
+                            <li class="category-title">
+                                <img src="../../assets/images/guan_bangzhu.png"/>
+                                <span>主题户型</span>
+                            </li>
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:5}}">精致麻雀窝</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:6}}">温馨小小窝</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:7}}">甜蜜婚房</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:8}}">雅致清凉小窝</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:9}}">单身贵族</router-link>
+                            </li> 
+                            <li class="category-title">
+                                <img src="../../assets/images/guan_bangzhu.png"/>
+                                <span>飘窗设计</span>
+                            </li> 
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:10}}">田园风格</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:11}}">古典风格</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:12}}">北欧风格</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:13}}">功能型</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:14}}">休闲型</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_items',query:{dataId:15}}">景观型</router-link>
+                            </li>
+
+                             <li class="category-title">
+                                <img src="../../assets/images/guan_bangzhu.png"/>
+                                <span>装饰选材</span>
+                            </li> 
+                            <li class="category-item">
+                                <router-link :to="{name:'category_grides',query:{dataId:1}}">灯具</router-link>
+                            </li>
+                            <li class="category-item">
+                                <router-link :to="{name:'category_grides',query:{dataId:2}}">衣柜</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_grides',query:{dataId:3}}">窗帘</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_grides',query:{dataId:4}}">瓷砖</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_grides',query:{dataId:5}}">沙发</router-link>
+                            </li>  
+                            <li class="category-item">
+                                <router-link :to="{name:'category_grides',query:{dataId:6}}">油漆</router-link>
+                            </li>    
+                            <li class="category-item">
+                                <router-link :to="{name:'category_grides',query:{dataId:7}}">五金</router-link>
+                            </li>    
+                            <li class="category-item">
+                                <router-link :to="{name:'category_grides',query:{dataId:8}}">厨柜</router-link>
+                            </li>    
+                            <li class="category-item">
+                                <router-link :to="{name:'category_grides',query:{dataId:9}}">沙窗</router-link>
+                            </li>    
                         </ul>  
                     </div>  
                 </div>
                 <div class="second-category-right mui-scroll-wrapper">
-                    <div class="mui-scroll">  
-                        <ul class="datalist mui-clearfix">  
-                            <li>列表数据 111</li>  
-                            <li>列表数据 222</li>  
-                            <li>列表数据 333</li>  
-                            <li>列表数据 444</li>  
-                            <li>列表数据 555</li>  
-                            <li>列表数据 666</li>  
-                            <li>列表数据 777</li>  
-                            <li>列表数据 888</li>  
-                            <li>列表数据 999</li>  
-                            <li>列表数据 1010</li>  
-                            <li>列表数据 1111</li>  
-                            <li>列表数据 1212</li>  
-                            <li>列表数据 1313</li>  
-                            <li>列表数据 1414</li>  
-                            <li>列表数据 1515</li>  
+                    <div class="mui-scroll" ref="categoryright">  
+                        <ul>  
+                            <li><router-view></router-view></li>
+                            <!--  <li><category-items url="products-simplest-list.json"></category-items></li> --> 
+                           <!--  <li><category-gride url="products-other-list.json"></category-gride></li>  -->
                         </ul> 
                     </div>
                 </div>
@@ -58,9 +120,15 @@
     </div>
 </template>
 <script>
+    import categoryItems from '../../components/category/categoryitems.vue';
+    import categoryGride from '../../components/category/categorygride.vue';
      export default {
+        components:{
+              categoryItems:categoryItems,
+              categoryGride:categoryGride
+        },
         mounted(){
-
+            var that = this;
             mui.ready(function() {  
             //初始化区域滚动  
                 mui(".mui-scroll-wrapper").scroll({
@@ -72,22 +140,31 @@
                     deceleration:0.0006, //阻尼系数,系数越小滑动越灵敏
                     bounce: true //是否启用回弹
                 });  
-  
-            });  
+            });
+            mui(".first-category-left").on('tap','.category-item a',function(){
+               /* window.location.href = this.href;*/
+                /*当前为选中，再点就不请求数据*/
+                if(this.classList.contains('now')) return false;
+                var id = this.getAttribute('data-id');
+                mui('.first-category-left ul li.category-item').each(function(index,item){
+                     this.classList.remove('now')
+                });
+                this.parentNode.classList.add('now');
+                // mui('.second-category-right').scroll().refresh();   //先刷新一次布局再scrollTo
+                mui('.second-category-right').scroll().scrollTo(0, 0/*, 100*/); //100毫秒滚动到顶
+                mui('.second-category-right').scroll().reLayout();
+            });
+            this.$router.push({name:'category_items',query:{dataId:1}});
         }
      }
 </script>
 <style scoped>
-
-.datalist li { height: 100px; } 
-
-
 .category-container{
     width: 100%;
     height: 1000%;
 }
 .first-category-left{
-    width: 26%;
+    width: 28%;
     height: 100%;
     float: left;
 }
@@ -96,19 +173,37 @@
     width: 100%;
 }
 .first-category-left ul li{
-    width: 100%;
-    height: 50px;
-    line-height: 50px;
+    width: 96%;
+    height: 40px;
+    line-height: 40px;
     text-align: center;
     border-right: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
     background-color: #f3f4f5;
+   
 }
 
 .first-category-left ul li.now{
     background-color: #fff;
     border-right: none;
 }
+
+
+.first-category-left .category-title{
+    background: #e8f1db;
+    /*border-right: 1px solid #e5e5e5;*/
+    border-right:none;
+    box-shadow: 0px 4px 6px #cbd1c3;
+    z-index: 50;
+    position: relative;
+}
+.category-title img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    vertical-align: middle;
+}
+
 
 .first-category-left ul li a{
     color: #666;
@@ -118,11 +213,10 @@
 }
 
 .second-category-right.mui-scroll-wrapper{
-    padding: 50px 10px 10px;    
-    left: 26%;
-    width: 74%;
+    padding: 40px 5px 10px;    
+    left: 28%;
+    width: 72%;
     height: 100%;
-
 }
 
 .first-category-left .mui-scroll{
@@ -202,4 +296,5 @@
     padding-left: 30px;
     background: #fff;
 }
+
 </style>

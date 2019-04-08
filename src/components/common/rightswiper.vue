@@ -3,7 +3,7 @@
         <div class="swiper-wrapper">
             <div class="swiper-slide swiper-slide-active" style="margin-right: 10px;" v-for="(img,index) in imgs" :key="index">
                 <a href="javascript:;">
-                    <img v-lazy="domain + img.img_url"/>
+                    <img v-lazy="domain + img.img_url" :key="img.img_url"/>
                     <div class="product-describe">
                         <h3>{{img.title}}</h3>
                         <span class="sell_price">${{img.sell_price}} &nbsp</span>

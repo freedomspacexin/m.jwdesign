@@ -42,10 +42,6 @@
     color: #ffc428;
 }
 
-.mui-bar-tab .mui-tab-item.router-link-exact-active{
-    color: #ffc428;
-}
-
 .mui-bar-tab .mui-tab-item .icomoon_font {
     top: 3px;
     width: 24px;
@@ -88,6 +84,9 @@
 .mui-bar .mui-title .icomoon_font {
     margin: 0;
     padding: 0;
+}
+.mint-indicator-wrapper {
+    z-index: 999;
 }
 
 

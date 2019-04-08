@@ -2,7 +2,7 @@
         <div class="product-gride-container">
                 <ul class="product-gride clearfix">
                     <li v-for="(img, index) in imgs" :key="index">
-                        <img v-lazy="domain+img.img_url"/>
+                        <img v-lazy="domain+img.img_url" :key="img.img_url"/>
                         <h3>{{img.title}}</h3>
                     </li>
                 </ul>

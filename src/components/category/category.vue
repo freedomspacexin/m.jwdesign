@@ -55,22 +55,22 @@
                                 <span>飘窗设计</span>
                             </li> 
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:10}}">田园风格</router-link>
+                                <router-link :to="{name:'category_grides',query:{dataId:10}}">田园风格</router-link>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:11}}">古典风格</router-link>
+                                <router-link :to="{name:'category_grides',query:{dataId:11}}">古典风格</router-link>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:12}}">北欧风格</router-link>
+                                <router-link :to="{name:'category_grides',query:{dataId:12}}">北欧风格</router-link>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:13}}">功能型</router-link>
+                                <router-link :to="{name:'category_grides',query:{dataId:13}}">功能型</router-link>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:14}}">休闲型</router-link>
+                                <router-link :to="{name:'category_grides',query:{dataId:14}}">休闲型</router-link>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:15}}">景观型</router-link>
+                                <router-link :to="{name:'category_grides',query:{dataId:15}}">景观型</router-link>
                             </li>
 
                              <li class="category-title">
@@ -161,7 +161,6 @@
 <style scoped>
 .category-container{
     width: 100%;
-    height: 1000%;
 }
 .first-category-left{
     width: 28%;
@@ -213,7 +212,7 @@
 }
 
 .second-category-right.mui-scroll-wrapper{
-    padding: 40px 5px 10px;    
+    padding: 40px 5px 50px;    
     left: 28%;
     width: 72%;
     height: 100%;
@@ -221,6 +220,7 @@
 
 .first-category-left .mui-scroll{
     padding-top: 40px;
+    padding-bottom: 50px;
 }
 
 .jw_search {

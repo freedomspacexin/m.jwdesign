@@ -5,8 +5,8 @@
                         <img v-lazy="domain+img.img_url" :key="img.img_url"/>
                         <div class="product-describe">
                         <h3>{{img.title}}</h3>
-                        <span class="sell_price">${{img.sell_price}} &nbsp</span>
-                        <del class="market_price">${{img.market_price}}</del>
+                        <span class="sell_price">{{img.sell_price}} &nbsp</span>
+                        <span class="market_price">{{img.market_price}}</span>
                     </div>
                     </li>
                 </ul>

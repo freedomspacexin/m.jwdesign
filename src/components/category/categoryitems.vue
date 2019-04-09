@@ -69,7 +69,7 @@
 .product-content .product-item{
     margin: 15px 0px;
     width: 100%;
-    height: 150px;
+    min-height: 150px;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.10);
 }
 

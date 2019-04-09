@@ -5,19 +5,19 @@
            <category-title title="设计风格"></category-title>
            <nav class="design-style-container">
 		        <ul class="design-style_wrapper clearfix">
-		            <li><a href="javascript:;" data-id="#new-product" @click="goSimplest">
+		            <li><a href="javascript:;" data-id="#simplest">
 		            	<img src="../../assets/images/design_style01.png">
 		            	<h5>简约</h5>
 		            </a></li>
-		            <li><a href="javascript:;" data-id="#birthday-product" @click="goModern">
+		            <li><a href="javascript:;" data-id="#modern">
 		            	<img src="../../assets/images/design_style02.png">
 		            	<h5>现代</h5>
 		            </a></li>
-		            <li><a href="javascript:;" data-id="#children-product" @click="goRestore">
+		            <li><a href="javascript:;" data-id="#restore">
 		            	<img src="../../assets/images/design_style03.png">
 		            	<h5>复古</h5>
 		            </a></li>
-		            <li><a href="javascript:;" data-id="#party-product" @click="goMashup">
+		            <li><a href="javascript:;" data-id="#mashup">
 		            	<img src="../../assets/images/design_style04.png">
 		            	<h5>混搭</h5>
 		            </a></li>      
@@ -28,7 +28,7 @@
                <product-items ref="simplest" title="简约" url="products-simplest-list.json"></product-items>
                <product-items ref="modern" title="现代" url="products-modern-list.json"></product-items>
                <product-items ref="restore" title="复古" url="products-restore-list.json"></product-items>
-               <product-items ref="mashup" title="混搭" url="products-mashup-list.json"></product-items>
+               <product-items id="mashup" ref="mashup" title="混搭" url="products-mashup-list.json"></product-items>
            </section>
            <category-title title="经典小户型"></category-title>
            <right-swiper class="content-container" url="products-small-style-list.json"></right-swiper>
@@ -45,19 +45,29 @@
             components:{
               productItems:productItems
             },
+
+            mounted(){
+                var that = this;
+                mui(".design-style_wrapper").on('tap','a',function(){
+                   console.log();
+                   switch(this.getAttribute("data-id")) {
+                      case '#simplest':
+                        that.myScrollTo({toT:that.$refs.simplest.$el.offsetTop-50});
+                        break;  
+                      case '#modern':
+                        that.myScrollTo({toT:that.$refs.modern.$el.offsetTop-50});
+                        break;
+                      case '#restore':
+                        that.myScrollTo({toT:that.$refs.restore.$el.offsetTop-50});
+                        break;
+                      case '#mashup':
+                        that.myScrollTo({toT:that.$refs.restore.$el.offsetTop-50});
+                        break;                      
+                   }
+              });
+            },
+
             methods:{
-                goSimplest(){
-                  this.myScrollTo({toT:this.$refs.simplest.$el.offsetTop-50});
-                },
-                goModern(){
-                  this.myScrollTo({toT:this.$refs.modern.$el.offsetTop-50});
-                },
-                goRestore(){
-                  this.myScrollTo({toT:this.$refs.restore.$el.offsetTop-50});
-                },
-                goMashup(){
-                  this.myScrollTo({toT:this.$refs.mashup.$el.offsetTop-50});
-                },
                 myScrollTo(options){
                   var defaults = {
                       toT : 0,    //滚动目标位置

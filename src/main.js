@@ -36,6 +36,7 @@ import categoryTitle from './components/common/categorytitle.vue'
 import rightSwiper from './components/common/rightswiper.vue'
 import productGride from './components/common/productgride.vue'
 import copyright from './components/common/copyright.vue'
+import topBar from './components/common/topbar.vue';
 
 //Axios拦截器监听请求发送和响应作出相应的加载界面
 Axios.interceptors.request.use(function(config){
@@ -61,6 +62,7 @@ Vue.component('categoryTitle',categoryTitle)
 Vue.component('rightSwiper',rightSwiper)
 Vue.component('productGride',productGride)
 Vue.component('copyright',copyright)
+Vue.component('topBar',topBar)
 
 /* eslint-disable no-new */
 new Vue({

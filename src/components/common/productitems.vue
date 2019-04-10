@@ -4,15 +4,15 @@
             <h3>{{title}}</h3><a href="category_v2.php?id=97">更多</a>
         </div>
         <div class="product-content">
-            <div class="product-item"  v-for="(img,index) in imgs" :key="index">
-                <a href="javascript:;">
+            <div class="product-item"  v-for="(img,index) in imgs" :key="index" >
+                <router-link :to="{name:'Personal'}">
                     <img v-lazy="domain + img.img_url" :key="img.img_url">
                     <div class="product-describe">
                         <h3>{{img.title}}</h3>
                         <span class="sell_price">${{img.sell_price}} &nbsp</span>
                         <del class="market_price">${{img.market_price}}</del>
                     </div>
-                </a>
+                </router-link>
             </div>
         </div>
     </div>

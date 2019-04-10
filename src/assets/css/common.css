@@ -131,6 +131,11 @@
   content: "\e408";
 }
 
+.icomoon_font_timer::before{
+  content: "\e425";
+}
+
+
 .mint-swipe .mint-swipe-indicators {
     position: absolute;
     bottom: 10px;
@@ -150,4 +155,11 @@
 .mint-swipe-indicator.is-active {
     background: #ffc428;
     opacity: 0.9;
+}
+
+.f_left{
+    float: left;
+}
+.f_right{
+    float: right;
 }

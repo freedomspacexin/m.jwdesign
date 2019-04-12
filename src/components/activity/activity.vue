@@ -22,7 +22,7 @@
 	                    </div>
                     </div>
                     <div class="activity-item-content">
-                    	<span :class="{'7.5':'discount_7_5','8.5':'discount_8_5','9.5':'discount_9_5'}[img.discount]"></span>
+                    	<span :class="{'7.5':'discount_7_5','8.5':'discount_8_5','9.0':'discount_9_0','9.5':'discount_9_5'}[img.discount]"></span>
        					<a href="javascript:;">
        					    <img v-lazy="domain + img.img_url" :key="img.img_url">
        					    <div class="product-describe">
@@ -197,6 +197,10 @@
 
 .activity-item-content .discount_8_5{
 	background-image: url('../../assets/images/discount_8_5.png');
+}
+
+.activity-item-content .discount_9_0{
+    background-image: url('../../assets/images/discount_9_0.png');
 }
 
 .activity-item-content .discount_9_5{

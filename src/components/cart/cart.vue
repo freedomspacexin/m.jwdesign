@@ -1,6 +1,6 @@
 <template>
         <div class="">
-            cart
+             <top-bar topTitle="购物车"></top-bar>
         </div>
 </template>
 <script>

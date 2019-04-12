@@ -3,7 +3,7 @@
             <!--搜索栏-->
             <header class="jw_search">
                 <div class="jw_search_box">
-                    <a href="#" class="icon_logo "><i class="icomoon_font icomoon_font_back"></i></a>
+                    <a href="javascript:;" class="icon_logo"><i class="icomoon_font icomoon_font_back"></i></a>
                     <form action="#">
                         <span class="icon_search mintui mintui-search"></span>
                         <input type="text" placeholder="placeholder"/>
@@ -20,89 +20,89 @@
                                 <span>设计风格</span>
                             </li>  
                             <li class="category-item now">
-                                <router-link :to="{name:'category_items',query:{dataId:1}}">简约</router-link>
+                                <a href="javascript:;" dataId="1">简约</a>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:2}}">现代</router-link>
+                                <a href="javascript:;" dataId="2">现代</a>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:3}}">复古</router-link>
+                                <a href="javascript:;" dataId="3">复古</a>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:4}}">混搭</router-link>
+                                <a href="javascript:;" dataId="4">混搭</a>
                             </li>  
                             <li class="category-title">
                                 <img src="../../assets/images/guan_bangzhu.png"/>
                                 <span>主题户型</span>
                             </li>
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:5}}">精致麻雀窝</router-link>
+                                <a href="javascript:;" dataId="5">精致麻雀窝</a>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:6}}">温馨小小窝</router-link>
+                                <a href="javascript:;" dataId="6">温馨小小窝</a>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:7}}">甜蜜婚房</router-link>
+                                <a href="javascript:;" dataId="7">甜蜜婚房</a>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:8}}">雅致清凉小窝</router-link>
+                                <a href="javascript:;" dataId="8">雅致清凉小窝</a>
                             </li>  
                             <li class="category-item">
-                                <router-link :to="{name:'category_items',query:{dataId:9}}">单身贵族</router-link>
+                                <a href="javascript:;" dataId="9">单身贵族</a>
                             </li> 
                             <li class="category-title">
                                 <img src="../../assets/images/guan_bangzhu.png"/>
                                 <span>飘窗设计</span>
                             </li> 
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:10}}">田园风格</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="10">田园风格</a>
                             </li>  
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:11}}">古典风格</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="11">古典风格</a>
                             </li>  
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:12}}">北欧风格</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="12">北欧风格</a>
                             </li>  
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:13}}">功能型</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="13">功能型</a>
                             </li>  
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:14}}">休闲型</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="14">休闲型</a>
                             </li>  
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:15}}">景观型</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="15">景观型</a>
                             </li>
 
                              <li class="category-title">
                                 <img src="../../assets/images/guan_bangzhu.png"/>
                                 <span>装饰选材</span>
                             </li> 
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:1}}">灯具</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="1">灯具</a>
                             </li>
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:2}}">衣柜</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="2">衣柜</a>
                             </li>  
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:3}}">窗帘</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="3">窗帘</a>
                             </li>  
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:4}}">瓷砖</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="4">瓷砖</a>
                             </li>  
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:5}}">沙发</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="5">沙发</a>
                             </li>  
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:6}}">油漆</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="6">油漆</a>
                             </li>    
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:7}}">五金</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="7">五金</a>
                             </li>    
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:8}}">厨柜</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="8">厨柜</a>
                             </li>    
-                            <li class="category-item">
-                                <router-link :to="{name:'category_grides',query:{dataId:9}}">沙窗</router-link>
+                            <li class="category-gride">
+                                <a href="javascript:;" dataId="9">沙窗</a>
                             </li>    
                         </ul>  
                     </div>  
@@ -141,20 +141,39 @@
                     bounce: true //是否启用回弹
                 });  
             });
-            mui(".first-category-left").on('tap','.category-item a',function(){
+            mui(".first-category-left").on('tap','a',function(){
                /* window.location.href = this.href;*/
                 /*当前为选中，再点就不请求数据*/
                 if(this.classList.contains('now')) return false;
-                var id = this.getAttribute('data-id');
-                mui('.first-category-left ul li.category-item').each(function(index,item){
-                     this.classList.remove('now')
+                mui('.first-category-left ul li a').each(function(index,item){
+                     this.parentNode.classList.remove('now')
                 });
                 this.parentNode.classList.add('now');
                 // mui('.second-category-right').scroll().refresh();   //先刷新一次布局再scrollTo
                 mui('.second-category-right').scroll().scrollTo(0, 0/*, 100*/); //100毫秒滚动到顶
                 mui('.second-category-right').scroll().reLayout();
             });
-            this.$router.push({name:'category_items',query:{dataId:1}});
+            this.$router.replace({name:'category_items',query:{dataId:1}});
+
+            mui(".category-item").on('tap', 'a',function(){
+                var dataId = this.getAttribute('dataId');
+                that.$router.replace({name:'category_items',query:{dataId:dataId}});
+            });
+
+            mui(".category-gride").on('tap', 'a',function(){
+                var dataId = this.getAttribute('dataId');
+                that.$router.replace({name:'category_grides',query:{dataId:dataId}});
+            });
+
+
+            mui(".jw_search_box").on('tap','.icon_logo',function(){
+                that.goBack();
+            });
+        },
+        methods:{
+            goBack(){
+                this.$router.go(-1); //根据浏览器记录返回上一次
+            }
         }
      }
 </script>

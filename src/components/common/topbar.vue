@@ -3,7 +3,7 @@
             <!--搜索栏-->
             <header class="jw-top-bar">
                 <div class="top-bar_box">
-                    <a href="#" class="icon_back"><i class="icomoon_font icomoon_font_back"></i></a>
+                    <a href="javascript:;" class="icon_back"><i class="icomoon_font icomoon_font_back" @click="goBack"></i></a>
                     <h3 action="#">{{topTitle}}</h3>
                     <a href="#" class="menu"><i class="icomoon_font icomoon_font_menu"></i></a>
                 </div>
@@ -14,6 +14,17 @@
      export default {
         props:['topTitle'],
         mounted(){
+        },
+        methods:{
+            goBack(){
+                this.$router.go(-1); //根据浏览器记录返回上一次
+            }
+        },
+        mounted(){
+            var that = this;
+            mui(".top-bar_box").on('tap','.icon_back',function(){
+                that.goBack();
+            });
         }
      }
 </script>

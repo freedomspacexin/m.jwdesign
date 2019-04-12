@@ -135,6 +135,57 @@
   content: "\e425";
 }
 
+.icomoon_font_more::before{
+  content: "\e409";
+}
+
+.icomoon_font_order::before{
+  content: "\e873";
+}
+
+.icomoon_font_wallet::before{
+  content: "\e850";
+}
+
+.icomoon_font_delivery::before{
+  content: "\e16a";
+}
+
+.icomoon_font_take::before{
+  content: "\e558";
+}
+
+.icomoon_font_evaluate::before{
+  content: "\e0d8";
+}
+
+.icomoon_font_purse::before{
+  content: "\e905";
+}
+
+.icomoon_font_commission::before{
+  content: "\e906";
+}
+
+.icomoon_font_store::before{
+  content: "\e908";
+}
+
+.icomoon_font_address::before{
+  content: "\f2bb";
+}
+
+.icomoon_font_explain::before{
+  content: "\e904";
+}
+
+.icomoon_font_password::before{
+  content: "\e900";
+}
+
+.icomoon_font_message::before{
+  content: "\e907";
+}
 
 .mint-swipe .mint-swipe-indicators {
     position: absolute;

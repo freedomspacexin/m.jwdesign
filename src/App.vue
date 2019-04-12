@@ -15,11 +15,11 @@
               <span class="mui-tab-label">分类</span>
           </router-link>
           <router-link class="mui-tab-item" :to="{name:'Activity'}">
-              <span class="icomoon_font icomoon_font_active"><span class="mui-badge"></span></span>
+              <span class="icomoon_font icomoon_font_active"></span>
               <span class="mui-tab-label">活动</span>
           </router-link>
-          <router-link class="mui-tab-item" :to="{name:'Cart'}">
-              <span class="icomoon_font icomoon_font_cart"></span>
+          <router-link class="mui-tab-item cart" :to="{name:'Cart'}">
+              <span class="icomoon_font icomoon_font_cart"><span class="cart-count">0</span></span>
               <span class="mui-tab-label">购物车</span>
           </router-link>
           <router-link class="mui-tab-item" :to="{name:'Personal'}">
@@ -46,5 +46,21 @@
 }
 .router-enter, .router-leave-to{
     opacity: 0;/*某一时该状态*/
+}
+.cart{
+  position: relative;
+}
+.cart-count{
+    font-size: 10px;
+    line-height: 1.4;
+    position: absolute;
+    top: 0px;
+    left: 70%;
+    margin-left: -10px;
+    padding: 1px 5px;
+    color: white;
+    border-radius: 8px;
+    background: red; 
+    z-index: 1;
 }
 </style>

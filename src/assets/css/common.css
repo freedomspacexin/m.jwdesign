@@ -186,6 +186,9 @@
 .icomoon_font_message::before{
   content: "\e907";
 }
+.icomoon_font_checked::before{
+  content: "\e86c";
+}
 
 .mint-swipe .mint-swipe-indicators {
     position: absolute;

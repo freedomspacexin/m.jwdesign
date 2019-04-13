@@ -19,7 +19,7 @@
               <span class="mui-tab-label">活动</span>
           </router-link>
           <router-link class="mui-tab-item cart" :to="{name:'Cart'}">
-              <span class="icomoon_font icomoon_font_cart"><span class="cart-count">0</span></span>
+              <span class="icomoon_font icomoon_font_cart"><span class="cart-count">{{goodsNum}}</span></span>
               <span class="mui-tab-label">购物车</span>
           </router-link>
           <router-link class="mui-tab-item" :to="{name:'Personal'}">
@@ -31,7 +31,19 @@
     </div>
 </template>
 <script>
+    import connect from './components/common/connect.js';
+    import localStorageTool from './components/common/localstorageTool.js';
     export default {
+        data(){
+            return {
+                goodsNum:localStorageTool.getTotalProdsNum(),
+            }
+        },
+        created(){
+            connect.$on('addShopCart', (num)=>{
+                this.goodsNum += num ;
+            });
+        },
         mounted(){
           mui('body').on('tap','a',function(){
             window.location.href = this.href
@@ -62,5 +74,6 @@
     border-radius: 8px;
     background: red; 
     z-index: 1;
+    display: none;
 }
 </style>

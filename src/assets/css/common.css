@@ -190,6 +190,22 @@
   content: "\e86c";
 }
 
+.icomoon_font_great::before{
+  content: "\e8dc";
+}
+
+.icomoon_font_share::before{
+  content: "\e80d";
+}
+
+.icomoon_font_contect::before{
+  content: "\e311";
+}
+
+.icomoon_font_location::before{
+  content: "\e8b4";
+}
+
 .mint-swipe .mint-swipe-indicators {
     position: absolute;
     bottom: 10px;

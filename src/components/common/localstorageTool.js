@@ -16,13 +16,14 @@ Tools.deleteProdById = function(id){
 }
 
 //3、修改
-Tools.updateProds = function(p){
+Tools.updateProds = function(p,callback){
 	if (prods[p.id]){//原本商品存在，只修改数据
 		prods[p.id] += p.num;
 	} else {
 		prods[p.id] = p.num;
 	}
 	this.saveProds(prods);
+	callback && callback();
 }
 
 //获取到storage

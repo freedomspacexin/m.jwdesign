@@ -19,90 +19,90 @@
                                 <img src="../../assets/images/guan_bangzhu.png"/>
                                 <span>设计风格</span>
                             </li>  
-                            <li class="category-item now">
-                                <a href="javascript:;" dataId="1">简约</a>
+                            <li class="cate category-item now">
+                                <a href="javascript:;" class="1"" dataId="1">简约</a>
                             </li>  
-                            <li class="category-item">
-                                <a href="javascript:;" dataId="2">现代</a>
+                            <li class="cate category-item">
+                                <a href="javascript:;" class="2"" dataId="2">现代</a>
                             </li>  
-                            <li class="category-item">
-                                <a href="javascript:;" dataId="3">复古</a>
+                            <li class="cate category-item">
+                                <a href="javascript:;" class="3"" dataId="3">复古</a>
                             </li>  
-                            <li class="category-item">
-                                <a href="javascript:;" dataId="4">混搭</a>
+                            <li class="cate category-item">
+                                <a href="javascript:;" class="4"" dataId="4">混搭</a>
                             </li>  
                             <li class="category-title">
                                 <img src="../../assets/images/guan_bangzhu.png"/>
                                 <span>主题户型</span>
                             </li>
-                            <li class="category-item">
-                                <a href="javascript:;" dataId="5">精致麻雀窝</a>
+                            <li class="cate category-item">
+                                <a href="javascript:;" class="5"" dataId="5">精致麻雀窝</a>
                             </li>  
-                            <li class="category-item">
-                                <a href="javascript:;" dataId="6">温馨小小窝</a>
+                            <li class="cate category-item">
+                                <a href="javascript:;" class="6"" dataId="6">温馨小小窝</a>
                             </li>  
-                            <li class="category-item">
-                                <a href="javascript:;" dataId="7">甜蜜婚房</a>
+                            <li class="cate category-item">
+                                <a href="javascript:;" class="7"" dataId="7">甜蜜婚房</a>
                             </li>  
-                            <li class="category-item">
-                                <a href="javascript:;" dataId="8">雅致清凉小窝</a>
+                            <li class="cate category-item">
+                                <a href="javascript:;" class="8"" dataId="8">雅致清凉小窝</a>
                             </li>  
-                            <li class="category-item">
-                                <a href="javascript:;" dataId="9">单身贵族</a>
+                            <li class="cate category-item">
+                                <a href="javascript:;" class="9"" dataId="9">单身贵族</a>
                             </li> 
                             <li class="category-title">
                                 <img src="../../assets/images/guan_bangzhu.png"/>
                                 <span>飘窗设计</span>
                             </li> 
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="10">田园风格</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="10" dataId="10">田园风格</a>
                             </li>  
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="11">古典风格</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="11" dataId="11">古典风格</a>
                             </li>  
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="12">北欧风格</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="12" dataId="12">北欧风格</a>
                             </li>  
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="13">功能型</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="13" dataId="13">功能型</a>
                             </li>  
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="14">休闲型</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="14" dataId="14">休闲型</a>
                             </li>  
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="15">景观型</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="15" dataId="15">景观型</a>
                             </li>
 
-                             <li class="category-title">
+                             <li class="category-title" ref="categoryGride">
                                 <img src="../../assets/images/guan_bangzhu.png"/>
                                 <span>装饰选材</span>
                             </li> 
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="1">灯具</a>
+                            <li class="cate category-gride" ref="firstGride">
+                                <a href="javascript:;" class="16" dataId="16">灯具</a>
                             </li>
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="2">衣柜</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="17" dataId="17">衣柜</a>
                             </li>  
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="3">窗帘</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="18" dataId="18">窗帘</a>
                             </li>  
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="4">瓷砖</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="19" dataId="19">瓷砖</a>
                             </li>  
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="5">沙发</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="20" dataId="20">沙发</a>
                             </li>  
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="6">油漆</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="21" dataId="21">油漆</a>
                             </li>    
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="7">五金</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="22" dataId="22">五金</a>
                             </li>    
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="8">厨柜</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="23" dataId="23">厨柜</a>
                             </li>    
-                            <li class="category-gride">
-                                <a href="javascript:;" dataId="9">沙窗</a>
+                            <li class="cate category-gride">
+                                <a href="javascript:;" class="24" dataId="24">沙窗</a>
                             </li>    
                         </ul>  
                     </div>  
@@ -127,8 +127,22 @@
               categoryItems:categoryItems,
               categoryGride:categoryGride
         },
+        created(){
+        },
+        updated(){
+        },
         mounted(){
             var that = this;
+            mui('.cate').each(function(index,item){
+                this.classList.remove('now');
+            });
+            let id= this.$route.query.dataId;
+            /*选中的li*/
+            var selectedEle =  mui('.'+id)[0].parentNode;
+            selectedEle.classList.add('now');
+            let offsetH = selectedEle.offsetTop-selectedEle.offsetHeight * 2;
+            mui(".first-category-left").scroll().scrollTo(0,-offsetH,0);
+          
             mui.ready(function() {  
             //初始化区域滚动  
                 mui(".mui-scroll-wrapper").scroll({
@@ -153,8 +167,6 @@
                 mui('.second-category-right').scroll().scrollTo(0, 0/*, 100*/); //100毫秒滚动到顶
                 mui('.second-category-right').scroll().reLayout();
             });
-            this.$router.replace({name:'category_items',query:{dataId:1}});
-
             mui(".category-item").on('tap', 'a',function(){
                 var dataId = this.getAttribute('dataId');
                 that.$router.replace({name:'category_items',query:{dataId:dataId}});

@@ -2,7 +2,7 @@
       <div class="product-items" id="product-items">
         <div class="product-content">
             <div class="product-item"  v-for="(img,index) in imgs" :key="index">
-                <a href="javascript:;">
+                <a href="javascript:;" :data-id="img.id">
                     <img v-lazy="domain + img.img_url" :key="img.img_url">
                     <div class="product-describe">
                         <h3>{{img.title}}</h3>
@@ -35,6 +35,10 @@
             this.getData();
     },
     mounted(){
+        mui('.product-content').on('tap','a', function(e){
+            let id = this.getAttribute('data-id');
+            console.log(id);
+        });
     },
     methods:{
         getData(){

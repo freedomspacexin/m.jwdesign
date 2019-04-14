@@ -6,7 +6,7 @@
 								<img src="../../assets/images/W_car.png"/>
 							</div>
 							<p>暂无商品</p>
-							<a href="javascript:;">快去选购吧 ></a>
+							<a href="javascript:;" class="goshopping">快去选购吧 >></a>
 			 </div>
              <div class="pay-detail">
              	<ul class="mui-table-view">
@@ -67,7 +67,7 @@
      		if(process.env.NODE_ENV == 'production'){
                 this.domain = '/view.jw.design.io';
             }
-			 localStorageTool.saveProds({"57":2,"58":1});///*设置默认*/
+			//localStorageTool.saveProds({"57":2,"58":1});///*设置默认*/
      		//获取local的数据
         	let prods = localStorageTool.getProds(); 
         	//判断如果没有商品，return
@@ -103,6 +103,11 @@
      	mounted(){
      		var that = this;
      		let prods = localStorageTool.getProds(); 
+
+            mui('.W_car_box').on('tap','.goshopping', function(e){
+                that.$router.push({name:'category_grides',query:{dataId:16,from:'cart'}});
+            });
+
         	//判断如果没有商品，return
         	if(Object.keys(prods).length === 0){
         		this.$refs.noProduct.classList.add('show');
@@ -147,7 +152,6 @@
     			  that.goodsList[index].isPicked = !that.goodsList[index].isPicked;
                   that.goodsList.splice(index, 1, that.goodsList[index]);
     		});
-
      	},
      	methods:{
      		add(i){
@@ -266,7 +270,7 @@
 .W_car_box p {
     font-size: 16px;
     color: #8a8a8a;
-    display: inline-block;
+    display: block;
     margin-top: 5%;
 }
 
@@ -485,5 +489,11 @@
 
 .total-money i{
 	color: #ffc428;
+}
+
+.W_car_box .goshopping{
+    display: inline-block;
+    height: 36px;
+    font-size: 14px;
 }
 </style>

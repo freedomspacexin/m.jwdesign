@@ -2,12 +2,14 @@
         <div class="product-gride-container">
                 <ul class="product-gride clearfix">
                     <li v-for="(img, index) in imgs" :key="index">
-                        <img v-lazy="domain+img.img_url" :key="img.img_url"/>
-                        <div class="product-describe">
-                        <h3>{{img.title}}</h3>
-                        <span class="sell_price">{{img.sell_price}} &nbsp</span>
-                        <span class="market_price">{{img.market_price}}</span>
-                    </div>
+                        <a href="javascript:;" :data-id="img.id">
+                            <img v-lazy="domain+img.img_url" :key="img.img_url"/>
+                            <div class="product-describe">
+                            <h3>{{img.title}}</h3>
+                            <span class="sell_price">{{img.sell_price}} &nbsp</span>
+                            <span class="market_price">{{img.market_price}}</span>
+                        </div>
+                        </a>
                     </li>
                 </ul>
         </div>
@@ -25,6 +27,13 @@ export default{
                 this.domain = '/view.jw.design.io';
             }
             this.getData();
+    },
+    mounted(){
+        var _self = this;
+        mui('.product-gride-container').on('tap','a', function(e){
+            let id = this.getAttribute('data-id');
+            _self.$router.push({name:'ProductDetail',query:{id:id}});
+        });
     },
     methods:{
         getData(){
@@ -56,6 +65,10 @@ export default{
     margin: 6px 1%;
     float: left;
     box-shadow: 0 0 5px 0 rgba(0,0,0,0.10);
+}
+
+.product-gride-container li a{
+    color: #666;;
 }
 
 .product-gride-container li:nth-child(2n+1){

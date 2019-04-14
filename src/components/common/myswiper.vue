@@ -29,6 +29,7 @@
 					.catch(err=>{
 						console.log(err);
 					});
+					break;
 			}
 		}
 	}

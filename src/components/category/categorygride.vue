@@ -32,7 +32,13 @@ export default{
         var _self = this;
         mui('.product-gride-container').on('tap','a', function(e){
             let id = this.getAttribute('data-id');
-            _self.$router.push({name:'ProductDetail',query:{id:id}});
+            if (id >= 50){
+                //跳转到商品详情
+                _self.$router.push({name:'ProductDetail',query:{id:id}});
+            } else {
+                //跳转到设计详情
+                _self.$router.push({name:'DesignDetail',query:{id:id}});
+            }
         });
     },
     methods:{
@@ -46,7 +52,6 @@ export default{
                     console.log(err);
                 });
         }
-
     },
     watch:{
         '$route' (to, from) {

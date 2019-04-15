@@ -23,12 +23,12 @@
                     </div>
                     <div class="activity-item-content">
                     	<span :class="{'7.5':'discount_7_5','8.5':'discount_8_5','9.0':'discount_9_0','9.5':'discount_9_5'}[img.discount]"></span>
-       					<a href="javascript:;">
+       					<a href="javascript:;" :data-id="img.id">
        					    <img v-lazy="domain + img.img_url" :key="img.img_url">
        					    <div class="product-describe">
        					        <h3>{{img.title}}</h3>
        					        <span class="sell_price">{{img.designer}}</span>
-       					        <del class="market_price">找他设计</del>
+       					        <span class="market_price">找他设计</span>
        					    </div>
        					</a>
                     </div>
@@ -106,7 +106,12 @@
      	},
      	updated(){
      	},
-     	mounted(){			   
+     	mounted(){
+            var _self = this;
+            mui('.activity-product').on('tap','.activity-item-content a', function(e){
+                let id = this.getAttribute('data-id');
+                _self.$router.push({name:'DesignDetail',query:{id:id}});
+            });			   
      	}
 
      }

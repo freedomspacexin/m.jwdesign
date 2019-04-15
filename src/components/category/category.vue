@@ -131,15 +131,25 @@
         },
         updated(){
         },
+        beforeRouteEnter(to, from, next) {
+            let toName =to.name;
+            let fromName = from.name;
+            next(vm=>{
+                if(toName == "Category"){
+                    vm.$router.replace({name:'category_items',query:{dataId:1}});
+                }
+            });
+        },
         mounted(){
             var that = this;
             mui('.cate').each(function(index,item){
                 this.classList.remove('now');
             });
-            let id= this.$route.query.dataId;
+            let id= this.$route.query.dataId || 1;
             /*选中的li*/
             var selectedEle =  mui('.'+id)[0].parentNode;
             selectedEle.classList.add('now');
+            //滚动到选中的li
             let offsetH = selectedEle.offsetTop-selectedEle.offsetHeight * 2;
             mui(".first-category-left").scroll().scrollTo(0,-offsetH,0);
           

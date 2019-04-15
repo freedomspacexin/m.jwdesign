@@ -38,6 +38,18 @@
 
 						});
 					break;
+				case 'detail-design-list.json':
+					var id = urls[1].split('=')[1];
+					this.$ajax('detail-design-list.json')
+						.then(res=>{
+							this.imgs = res.data.find(function(item){
+								return item.id === parseInt(id);
+							}).img_urls;
+						})
+						.catch(err=>{
+
+						});
+					break;
 			}
 		},
 		updated(){
@@ -55,7 +67,6 @@
 	width: 100%;
 	margin: 0 auto;
     overflow: hidden;
-    height: 320px;
 }
 .swiper-slide a{
 	width: 100%;

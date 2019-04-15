@@ -21,7 +21,9 @@
   											<label :data-index="index" for="checkbox" class="picked"></label>
 										</div>
 										<div class="product-pic">
+                                            <a href="javascript:;" class="pic" :data-id="goods.id">
 											<img v-lazy="domain+goods.img_url" :key="goods.img_url"/>
+                                            </a>
 										</div>
 										<div class="product-detail">
 											<p class="product-title">{{goods.title}}</p>
@@ -152,6 +154,10 @@
     			  that.goodsList[index].isPicked = !that.goodsList[index].isPicked;
                   that.goodsList.splice(index, 1, that.goodsList[index]);
     		});
+            mui('.pay-detail').on('tap','.pic', function(e){
+                let id = this.getAttribute('data-id');
+                that.$router.push({name:'ProductDetail',query:{id:id}});
+            });
      	},
      	methods:{
      		add(i){

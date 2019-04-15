@@ -8,6 +8,7 @@ import Activity from '@/components/activity/activity.vue';
 import Cart from '@/components/cart/cart.vue';
 import Personal from '@/components/personal/personalcenter.vue';
 import ProductDetail from '@/components/products/productdetail.vue';
+import DesignDetail from '@/components/products/designdetail.vue';
 
 Vue.use(Router)
 
@@ -16,13 +17,14 @@ export default new Router({
   routes: [
     {path:'/', redirect:'/home' },
     {path: '/home', name: 'Home', component: Home},
-    {path: '/category', redirect:'category/items?dataId=1', name: 'Category', component: Category, children:[
+    {path: '/category', name: 'Category', component: Category, children:[
 			{name:'category_items',path:'items', component:CategoryItems},
 			{name:'category_grides',path:'grides', component:CategoryGrides}
 		]},
     {path: '/activity', name: 'Activity', component: Activity},
     {path: '/cart', name: 'Cart', component: Cart},
     {path: '/personal', name: 'Personal', component: Personal},
-    {path: '/productDetail', name: 'ProductDetail', component: ProductDetail}
+    {path: '/productDetail', name: 'ProductDetail', component: ProductDetail},
+    {path: '/designDetail', name: 'DesignDetail', component: DesignDetail}
   ]
 })

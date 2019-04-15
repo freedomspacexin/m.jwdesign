@@ -6,8 +6,8 @@
                     <img v-lazy="domain + img.img_url" :key="img.img_url">
                     <div class="product-describe">
                         <h3>{{img.title}}</h3>
-                        <span class="sell_price">${{img.sell_price}} &nbsp</span>
-                        <del class="market_price">${{img.market_price}}</del>
+                        <span class="sell_price">{{img.designer}} &nbsp</span>
+                        <span class="market_price">找他设计</span>
                     </div>
                 </a>
             </div>
@@ -35,9 +35,10 @@
             this.getData();
     },
     mounted(){
+        var _self = this;
         mui('.product-content').on('tap','a', function(e){
             let id = this.getAttribute('data-id');
-            console.log(id);
+            _self.$router.push({name:'DesignDetail',query:{id:id}});
         });
     },
     methods:{

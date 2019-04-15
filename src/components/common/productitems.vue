@@ -1,18 +1,18 @@
 <template>
       <div class="product-items" id="product-items">
         <div class="product-head clearfix">
-            <h3>{{title}}</h3><a href="category_v2.php?id=97">更多</a>
+            <h3>{{title}}</h3><a href="javascript:;" :data-id="categoryId">更多</a>
         </div>
         <div class="product-content">
             <div class="product-item"  v-for="(img,index) in imgs" :key="index" >
-                <router-link :to="{name:'Personal'}">
+                <a href="javascript:;" :data-id="img.id">
                     <img v-lazy="domain + img.img_url" :key="img.img_url">
                     <div class="product-describe">
                         <h3>{{img.title}}</h3>
-                        <span class="sell_price">${{img.sell_price}} &nbsp</span>
-                        <del class="market_price">${{img.market_price}}</del>
+                        <span class="sell_price">{{img.designer}} &nbsp</span>
+                        <span class="market_price">找他设计</span>
                     </div>
-                </router-link>
+                </a>
             </div>
         </div>
     </div>
@@ -25,8 +25,8 @@
             domain:'',
         }
     },
-        props:['title','url'],
-        created(){
+    props:['title','url','categoryId'],
+    created(){
             var urls = this.url.split('?');
             if(process.env.NODE_ENV == 'production'){
                 this.domain = '/view.jw.design.io';
@@ -69,8 +69,19 @@
                         console.log(err);
                     });
                     break;
-    }
-  }
+            }
+    },   
+    mounted(){
+        var _self = this;
+        mui('.product-content').on('tap','a', function(e){
+            let id = this.getAttribute('data-id');
+            _self.$router.push({name:'DesignDetail',query:{id:id}});
+        });
+        mui('.product-head').on('tap','a', function(e){
+            let id = this.getAttribute('data-id');
+            _self.$router.push({name:'category_items',query:{dataId:id}});
+        });
+    },
 }
 </script>
 <style scoped>

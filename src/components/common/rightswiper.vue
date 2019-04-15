@@ -2,17 +2,17 @@
     <div class="swiper-container" id="swiper-right">
         <div class="swiper-wrapper">
             <div class="swiper-slide swiper-slide-active" style="margin-right: 10px;" v-for="(img,index) in imgs" :key="index">
-                <a href="javascript:;">
+                <a href="javascript:;" :data-id="img.id" class="item">
                     <img v-lazy="domain + img.img_url" :key="img.img_url"/>
                     <div class="product-describe">
                         <h3>{{img.title}}</h3>
-                        <span class="sell_price">${{img.sell_price}} &nbsp</span>
-                        <del class="market_price">${{img.market_price}}</del>
+                        <span class="sell_price">{{img.designer}} &nbsp</span>
+                        <span class="market_price">找他设计</span>
                     </div>
                 </a>
             </div>
             <div class="swiper-slide" style="margin-right: 10px;">
-                <a href="javascript:;">
+                <a href="javascript:;" class="more">
                     <span>查看更多</span>
                 </a>
             </div>
@@ -47,6 +47,16 @@
                     });
                     break;
             }
+    },
+    mounted(){
+        var _self = this;
+        mui('.swiper-wrapper').on('tap','a.item', function(e){
+            let id = this.getAttribute('data-id');
+            _self.$router.push({name:'DesignDetail',query:{id:id}});
+        });
+        mui('.swiper-wrapper').on('tap','.more', function(e){
+            _self.$router.push({name:'category_items',query:{dataId:5}});
+        });
     },
     updated(){
         new Swiper('#swiper-right', {
@@ -105,6 +115,8 @@
 }
 
 .product-describe{
+    color: #684028;
+    font-size: 14px;
     height: 52px;
     padding: 8px;
 }

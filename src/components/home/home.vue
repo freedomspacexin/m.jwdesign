@@ -25,10 +25,10 @@
     	   </nav>
     	   <category-title></category-title>
          <section class="product-list">
-               <product-items ref="simplest" title="简约" url="products-simplest-list.json"></product-items>
-               <product-items ref="modern" title="现代" url="products-modern-list.json"></product-items>
-               <product-items ref="restore" title="复古" url="products-restore-list.json"></product-items>
-               <product-items id="mashup" ref="mashup" title="混搭" url="products-mashup-list.json"></product-items>
+               <product-items ref="simplest" categoryId="1" title="简约" url="products-simplest-list.json"></product-items>
+               <product-items ref="modern" categoryId="2" title="现代" url="products-modern-list.json"></product-items>
+               <product-items ref="restore" categoryId="3" title="复古" url="products-restore-list.json"></product-items>
+               <product-items id="mashup" categoryId="4" ref="mashup" title="混搭" url="products-mashup-list.json"></product-items>
            </section>
            <category-title title="经典小户型"></category-title>
            <right-swiper class="content-container" url="products-small-style-list.json"></right-swiper>
@@ -61,7 +61,7 @@
                         that.myScrollTo({toT:that.$refs.restore.$el.offsetTop-50});
                         break;
                       case '#mashup':
-                        that.myScrollTo({toT:that.$refs.restore.$el.offsetTop-50});
+                        that.myScrollTo({toT:that.$refs.mashup.$el.offsetTop-50});
                         break;                      
                    }
               });

@@ -54,22 +54,22 @@
                                 <img src="../../assets/images/guan_bangzhu.png"/>
                                 <span>飘窗设计</span>
                             </li> 
-                            <li class="cate category-gride">
+                            <li class="cate category-curtain">
                                 <a href="javascript:;" class="10" dataId="10">田园风格</a>
                             </li>  
-                            <li class="cate category-gride">
+                            <li class="cate category-curtain">
                                 <a href="javascript:;" class="11" dataId="11">古典风格</a>
                             </li>  
-                            <li class="cate category-gride">
+                            <li class="cate category-curtain">
                                 <a href="javascript:;" class="12" dataId="12">北欧风格</a>
                             </li>  
-                            <li class="cate category-gride">
+                            <li class="cate category-curtain">
                                 <a href="javascript:;" class="13" dataId="13">功能型</a>
                             </li>  
-                            <li class="cate category-gride">
+                            <li class="cate category-curtain">
                                 <a href="javascript:;" class="14" dataId="14">休闲型</a>
                             </li>  
-                            <li class="cate category-gride">
+                            <li class="cate category-curtain">
                                 <a href="javascript:;" class="15" dataId="15">景观型</a>
                             </li>
 
@@ -120,12 +120,8 @@
     </div>
 </template>
 <script>
-    import categoryItems from '../../components/category/categoryitems.vue';
-    import categoryGride from '../../components/category/categorygride.vue';
      export default {
         components:{
-              categoryItems:categoryItems,
-              categoryGride:categoryGride
         },
         created(){
         },
@@ -187,9 +183,18 @@
                 that.$router.replace({name:'category_grides',query:{dataId:dataId}});
             });
 
+            mui(".category-curtain").on('tap', 'a',function(){
+                var dataId = this.getAttribute('dataId');
+                that.$router.replace({name:'category_curtain',query:{dataId:dataId}});
+            });
+
 
             mui(".jw_search_box").on('tap','.icon_logo',function(){
                 that.goBack();
+            });
+
+            mui('.jw_search_box').on('tap','.login', function(e){
+                mui.toast('功能完善中...');
             });
         },
         methods:{

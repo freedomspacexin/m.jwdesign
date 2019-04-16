@@ -44,7 +44,7 @@
         </div>
             
         <div class="add-cart-content">
-            <a href="javascript:;" class="contact-customer">
+            <a href="tel:0662-3858188" class="contact-customer">
                 <i class="icomoon_font icomoon_font_contect"></i>
                 <span>联系客服</span>
             </a>
@@ -91,6 +91,9 @@
             });
             mui('.add-cart-content').on('tap','.add-cart', function(e){
                 _self.addCart();
+            });
+            mui('.add-cart-content').on('tap','.shopping', function(e){
+                mui.toast('功能完善中...');
             });
         },
         methods:{

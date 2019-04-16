@@ -2,17 +2,22 @@
     <footer class="footer" >
         <h2 class="footer-banner_title">骏威装饰</h2>
         <ul class="clearfix">
-            <li id="appDownloadLink"><a href="/appdown.html">下载APP</a></li>
+            <li id="appDownloadLink"><a href="javascript:;">下载APP</a></li>
             <li><a href="tel:0662-3858188">联系我们</a></li>
-            <li><a href="/article-company.html">全站公告</a></li>
-            <li><a href="/magazine/detail/189.html">经营资质</a></li>
+            <li><a href="javascript:;">全站公告</a></li>
+            <li><a href="javascript:;">经营资质</a></li>
         </ul>
         <p>Copyright © 2019 广东阳江骏威装饰有限公司 版权所有</p>
-        <div> 网站备案号：<a href="http://www.haoyueyuan.com" target="_blank">粤XXXXXXXXX</a></div >
+        <div> 网站备案号：<a href="javascript:;" target="_blank">粤XXXXXXXXX</a></div >
     </footer>
 </template>
 <script>
      export default {
+        mounted(){
+           mui('.footer').on('tap','a', function(e){
+                mui.toast('敬请期待');
+           });
+        },
      }
 </script>
 <style scoped>

@@ -6,8 +6,8 @@
                             <img v-lazy="domain+img.img_url" :key="img.img_url"/>
                             <div class="product-describe">
                             <h3>{{img.title}}</h3>
-                            <span class="sell_price">¥{{img.sell_price}} &nbsp</span>
-                            <del class="market_price">¥{{img.market_price}}</del>
+                            <span class="sell_price">{{img.designer}} &nbsp</span>
+                            <span class="market_price">找他设计</span>
                         </div>
                         </a>
                     </li>
@@ -32,8 +32,8 @@ export default{
         var _self = this;
         mui('.product-gride-container').on('tap','a', function(e){
             let id = this.getAttribute('data-id');
-            //跳转到商品详情
-            _self.$router.push({name:'ProductDetail',query:{id:id}});
+            //跳转到设计详情
+            _self.$router.push({name:'DesignDetail',query:{id:id}});
         });
     },
     methods:{

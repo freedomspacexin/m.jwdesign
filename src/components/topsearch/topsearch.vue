@@ -3,7 +3,7 @@
     <header class="jw_search">
         <div class="jw_search_box">
             <!--双飞翼布局-->
-            <a href="#" class="icon_logo">骏威装饰-商品</a>
+            <a href="javascript:;" class="icon_logo">骏威装饰-商品</a>
             <form action="#">
                 <span class="icon_search mintui mintui-search"></span>
                 <input type="text" placeholder="placeholder"/>
@@ -13,7 +13,13 @@
     </header>
 </template>
 <script>
-	
+	 export default {
+        mounted(){
+            mui('.jw_search_box').on('tap','.login', function(e){
+                mui.toast('功能完善中...');
+            });
+        },
+     }
 </script>
 <style scoped>
 

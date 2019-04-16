@@ -25,6 +25,9 @@
             mui(".top-bar_box").on('tap','.icon_back',function(){
                 that.goBack();
             });
+            mui('.top-bar_box').on('tap','.menu', function(e){
+                mui.toast('功能完善中...');
+            });
         }
      }
 </script>

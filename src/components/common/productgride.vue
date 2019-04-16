@@ -2,8 +2,10 @@
         <div class="product-gride-container">
                 <ul class="product-gride clearfix">
                     <li v-for="(img, index) in imgs" :key="index">
+                        <a href="javascript:;" :data-id="img.category_id" :data-style="img.category_style">
                         <img v-lazy="domain+img.img_url" :key="img.img_url"/>
                         <h3>{{img.title}}</h3>
+                        </a>
                     </li>
                 </ul>
         </div>
@@ -42,6 +44,18 @@ export default{
                     });
                     break;
             }
+    },
+    mounted(){
+        var _self = this;
+        mui('.product-gride-container').on('tap','a', function(e){
+            let id = this.getAttribute('data-id');
+            let style = this.getAttribute('data-style');
+            if(style == 'curtain'){
+                _self.$router.push({name:'category_curtain',query:{dataId:id}});
+            } else if(style == 'other') {
+                _self.$router.push({name:'category_grides',query:{dataId:id}});
+            }
+        });
     }
 }
 </script>
@@ -63,5 +77,6 @@ export default{
 .product-gride h3{
     padding: 5px 5px;
     text-align: center;
+    color: #666;
 }
 </style>

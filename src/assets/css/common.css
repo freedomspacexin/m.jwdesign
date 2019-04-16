@@ -206,6 +206,10 @@
   content: "\e8b4";
 }
 
+.icomoon_font_drop::before{
+  content: "\e5cf";
+}
+
 .mint-swipe .mint-swipe-indicators {
     position: absolute;
     bottom: 10px;

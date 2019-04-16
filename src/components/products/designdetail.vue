@@ -42,12 +42,12 @@
         </div>
             
         <div class="add-cart-content">
-            <a href="javascript:;" class="contact-customer">
+            <a href="tel:0662-3858188" class="contact-customer">
                 <i class="icomoon_font icomoon_font_contect"></i>
                 <span>联系客服</span>
             </a>
             <a href="javascript:;" class="add-cart">收藏</a>
-            <a href="javascript:;" class="shopping">预约设计</a>
+            <a href="javascript:;" class="books-design">预约设计</a>
         </div>
             
     </div>
@@ -88,7 +88,10 @@
                 bounce: true //是否启用回弹
             });
             mui('.add-cart-content').on('tap','.add-cart', function(e){
-               
+               mui.toast('功能完善中...');
+            });
+            mui('.add-cart-content').on('tap','.books-design', function(e){
+               _self.$router.push({name:'BooksDesign',query:{id:_self.id}});
             });
         },
         methods:{
@@ -139,7 +142,7 @@
     display: block;
 }
 
-.shopping{
+.books-design{
     background-color: #ff0000;
     color: #fff;
 

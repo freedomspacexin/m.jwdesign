@@ -63,9 +63,9 @@
                             </div>
                         </li>
                         <li class="commit-button">
-                            <button class="mui-btn mui-btn-success">
+                            <a href="javascript:;" class="mui-btn mui-btn-success">
                                 免费获取设计方案
-                            </button>
+                            </a>
                         </li>
                     </ul>
                 </div>
@@ -112,6 +112,9 @@
                     //返回 false 可以阻止选择框的关闭
                     mui('[name="address"]')[0].value=items[0].text+items[1].text+(items[2].text||'');
                 });
+            });
+            mui('.customer-info').on('tap','.commit-button a', function(e){
+                mui.toast('功能完善中...');
             });
         },
      }
@@ -203,7 +206,7 @@
     margin-top: 15px;
 }
 
-.commit-button button{
+.commit-button a{
     width: 100%;
 }
 

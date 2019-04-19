@@ -80,7 +80,7 @@
 公司室内装修流程参考
 申请流程：在线申请--》报价、设计、效果图--》到店体验/确定方案--》标准化施工、--》客户验收
 
-库： vue-router  vue  mint-ui axios
+库： vue-router  vue  mint-ui axios mui swiper 嵌套路由 懒加载 mui区域滑动    服务器数据摸拟
 
 
-webpack
+webpack vue-cli

@@ -3,11 +3,13 @@
         <div class="swiper-container">
   			<div class="swiper-wrapper">
  			   <div class="swiper-slide" v-for="(img,index) in imgs" :key="index">
- 			   	   <a href="javascript:;"><img :src="domain+img.imgurl"></a>
+ 			   	   <a href="javascript:;">
+ 			   	   	<img :src="domain+img.imgurl">
+ 			   	   </a>
  			   </div>
  			</div>
  			  <!-- Add Pagination -->
-    		<div class="swiper-pagination"></div>
+    		<div class="swiper-pagination"></div> 
 		</div>
 	</div>
 </template>

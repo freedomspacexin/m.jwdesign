@@ -8,19 +8,19 @@
                     <div class="product-desc">
                         <ul>
                             <li class="product-desc-title">
-                                <span>{{prodInfo.title}}</span>
+                                <span v-text="prodInfo.title"></span>
                             </li>
                             <li class="designer-info">
-                                <p>{{prodInfo.designer}}</p>
-                                <p>{{prodInfo.zhaiyao}}</p>
-                                <p>联系电话：{{prodInfo.designer_tel}}</p>
+                                <p><span v-text="prodInfo.designer"></span></p>
+                                <p><span v-text="prodInfo.zhaiyao"></span></p>
+                                <p>联系电话：<span v-text="prodInfo.designer_tel"></span></p>
                                 <div :class="prodInfo.is_activity?'activity show':'activity'">
-                                    <span>{{prodInfo.discount}}折</span>
+                                    <p><span v-text="prodInfo.discount"></span>折</p>
                                     <img src="../../assets/images/activity.png">
                                 </div>
                             </li>
                             <li class="share clearfix">
-                                <p><i class="icomoon_font icomoon_font_great"></i>{{prodInfo.great_comment}}人赞过</p>
+                                <p><i class="icomoon_font icomoon_font_great"></i><span v-text="prodInfo.great_comment"></span>人赞过</p>
                                 <p><i class="icomoon_font icomoon_font_share"></i>分享</p>
                             </li>
                         </ul>
@@ -53,11 +53,11 @@
     </div>
 </template>
 <script>
-     import detailSwiper from '../../components/products/detailswiper.vue';
+     //import detailSwiper from '../../components/products/detailswiper.vue';
      import localStorageTool from '../common/localstorageTool.js';
      export default {
         components:{
-              detailSwiper:detailSwiper,
+              detailSwiper:() => import('../../components/products/detailswiper.vue'),
         },
         data(){
             return{
@@ -177,6 +177,13 @@
 
 .show{
     display: block;
+}
+
+.activity p{
+     color: #ffc428;
+    font-size: 24px;
+     height: 100%;
+    line-height: 55px;
 }
 
 .activity span{

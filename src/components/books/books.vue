@@ -5,9 +5,9 @@
                 <div class="designer-card">
                     <ul>
                         <li class="designer-info">
-                            <p>{{prodInfo.designer}}</p>
-                            <p>{{prodInfo.zhaiyao}}</p>
-                            <p>联系电话：{{prodInfo.designer_tel}}</p>
+                            <p v-text="prodInfo.designer"></p>
+                            <p v-text="prodInfo.zhaiyao"></p>
+                            <p>联系电话：<span v-text="prodInfo.designer_tel"></span></p>
                         </li>
                     </ul>
                 </div>

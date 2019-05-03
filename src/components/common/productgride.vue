@@ -4,7 +4,7 @@
                     <li v-for="(img, index) in imgs" :key="index">
                         <a href="javascript:;" :data-id="img.category_id" :data-style="img.category_style">
                         <img v-lazy="domain+img.img_url" :key="img.img_url"/>
-                        <h3>{{img.title}}</h3>
+                        <h3 v-text="img.title"></h3>
                         </a>
                     </li>
                 </ul>

@@ -1,6 +1,6 @@
 <template>
         <div class="text-center line-style">
-                <h3>{{title}}</h3>
+                <h3 v-text="title"></h3>
                 <img src="../../assets/images/line.png">
         </div>
 </template>
@@ -12,6 +12,8 @@
 <style scoped>
 .line-style {
     margin: 20px 0px;
+    width: 100%;
+    min-height: 44px;
 }
 
 .line-style img{

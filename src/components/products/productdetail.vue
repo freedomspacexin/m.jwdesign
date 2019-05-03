@@ -8,11 +8,11 @@
                     <div class="product-desc">
                         <ul>
                             <li class="price">
-                                <p><s>￥</s>{{prodInfo.sell_price}}</p>
-                                <div>市场价：<del>￥{{prodInfo.market_price}}</del></div>
+                                <p><s>￥</s><span v-text="prodInfo.sell_price"></span></p>
+                                <div>市场价：<del>￥ <span v-text="prodInfo.market_price"></span></del></div>
                             </li>
                             <li class="product-desc-title">
-                                <span>{{prodInfo.title}}</span>
+                                <span v-text="prodInfo.title"></span>
                             </li>
                        
                             <li class="share clearfix">
@@ -23,9 +23,9 @@
                     </div>
                     <div class="product-props">
                         <p>商品参数：</p>
-                        <p>商品货号：{{prodInfo.goods_no}}</p>
-                        <p>库存情况：{{prodInfo.stock_quantity}}件</p>
-                        <p>上架时间：{{prodInfo.add_time}}</p>
+                        <p>商品货号：<span v-text="prodInfo.goods_no"></span></p>
+                        <p>库存情况：<span v-text="prodInfo.stock_quantity"></span>件</p>
+                        <p>上架时间：<span v-text="prodInfo.add_time"></span></p>
                     </div>
                     <div class="product-evaluate">
                         <div class="evaluate-head clearfix">
@@ -55,11 +55,11 @@
     </div>
 </template>
 <script>
-     import detailSwiper from '../../components/products/detailswiper.vue';
+     //import detailSwiper from '../../components/products/detailswiper.vue';
      import localStorageTool from '../common/localstorageTool.js';
      export default {
         components:{
-              detailSwiper:detailSwiper,
+              detailSwiper:() => import('../../components/products/detailswiper.vue'),
         },
         data(){
             return{

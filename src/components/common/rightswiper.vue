@@ -5,8 +5,8 @@
                 <a href="javascript:;" :data-id="img.id" class="item">
                     <img v-lazy="domain + img.img_url" :key="img.img_url"/>
                     <div class="product-describe">
-                        <h3>{{img.title}}</h3>
-                        <span class="sell_price">{{img.designer}} &nbsp</span>
+                        <h3 v-text="img.title"></h3>
+                        <span class="sell_price" v-text="img.designer"> &nbsp</span>
                         <span class="market_price">找他设计</span>
                     </div>
                 </a>

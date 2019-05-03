@@ -26,14 +26,14 @@
                                             </a>
 										</div>
 										<div class="product-detail">
-											<p class="product-title">{{goods.title}}</p>
+											<p class="product-title" v-text="goods.title"></p>
 											<div class="product-nums">
-												<p class="product-count">数量：<span>{{goods.num}}</span></p>
-												<span class="product-money">小计：¥<span>{{goods.sell_price*goods.num}}</span></span>
+												<p class="product-count">数量：<span v-text="goods.num"></span></p>
+												<span class="product-money">小计：¥<span v-text="goods.sell_price*goods.num"></span></span>
 											</div>
 											<div class="product-change-count">
 												<span data-sub="true" :data-index="index">-</span>
-												<span>{{goods.num}}</span>
+												<span v-text="goods.num"></span>
 												<span data-add="true" :data-index="index">+</span>
 											</div>
 										</div>
@@ -48,8 +48,8 @@
   						<label for="selected-all" class="chekbox-all"></label>
 					</div>
 		        	<span class="selected-all">全选</span>
-		        	<a href="javascript:;" class="go-pay">结算({{payment.num}})</a>
-		        	<span class="total-money"><span>合计&nbsp:&nbsp</span><i>¥{{payment.sum}}</i></span>
+		        	<a href="javascript:;" class="go-pay">结算(<span v-text="payment.num"></span>)</a>
+		        	<span class="total-money"><span>合计&nbsp:&nbsp</span><i>¥<span v-text="payment.sum"></span></i></span>
 	        </div>
         </div>
 </template>

@@ -237,3 +237,7 @@
 .f_right{
     float: right;
 }
+/*vue路由跳转时防止闪烁*/
+/*[v-cloak] {
+display: none;
+}*/ 

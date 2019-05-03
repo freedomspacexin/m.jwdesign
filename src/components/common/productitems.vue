@@ -1,15 +1,15 @@
 <template>
       <div class="product-items" id="product-items">
         <div class="product-head clearfix">
-            <h3>{{title}}</h3><a href="javascript:;" :data-id="categoryId">更多</a>
+            <h3 v-text="title"></h3><a href="javascript:;" :data-id="categoryId">更多</a>
         </div>
         <div class="product-content">
             <div class="product-item"  v-for="(img,index) in imgs" :key="index" >
                 <a href="javascript:;" :data-id="img.id">
                     <img v-lazy="domain + img.img_url" :key="img.img_url">
                     <div class="product-describe">
-                        <h3>{{img.title}}</h3>
-                        <span class="sell_price">{{img.designer}} &nbsp</span>
+                        <h3 v-text="img.title"></h3>
+                        <span class="sell_price" v-text="img.designer"> &nbsp</span>
                         <span class="market_price">找他设计</span>
                     </div>
                 </a>

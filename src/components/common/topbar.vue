@@ -4,7 +4,7 @@
             <header class="jw-top-bar">
                 <div class="top-bar_box">
                     <a href="javascript:;" class="icon_back"><i class="icomoon_font icomoon_font_back" @click="goBack"></i></a>
-                    <h3 action="#">{{topTitle}}</h3>
+                    <h3 action="#" v-text="topTitle"></h3>
                     <a href="#" class="menu"><i class="icomoon_font icomoon_font_menu"></i></a>
                 </div>
             </header>

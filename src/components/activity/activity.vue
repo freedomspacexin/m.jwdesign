@@ -9,16 +9,16 @@
 	                    <span class="name f_left">活动倒计时</span>
 
 	                    <div class="time f_left">
-	                        <span>{{img.h1}}</span>
-	                        <span>{{img.h2}}</span>
+	                        <span v-text="img.h1"></span>
+	                        <span v-text="img.h2"></span>
 	                        <span>:</span>
-	                        <span>{{img.m1}}</span>
-	                        <span>{{img.m2}}</span>
+	                        <span v-text="img.m1"></span>
+	                        <span v-text="img.m2"></span>
 	                        <span>:</span>
-	                        <span>{{img.s1}}</span>
-	                        <span>{{img.s2}}</span>
+	                        <span v-text="img.s1"></span>
+	                        <span v-text="img.s2"></span>
 	                        <!-- 临时解决内存更改但不能更新界面倒计时-->
-	                        <span style="display: none;">{{s2}}</span>
+	                        <span style="display: none;" v-text="s2"></span>
 	                    </div>
                     </div>
                     <div class="activity-item-content">
@@ -26,8 +26,8 @@
        					<a href="javascript:;" :data-id="img.id">
        					    <img v-lazy="domain + img.img_url" :key="img.img_url">
        					    <div class="product-describe">
-       					        <h3>{{img.title}}</h3>
-       					        <span class="sell_price">{{img.designer}}</span>
+       					        <h3 v-text="img.title"></h3>
+       					        <span class="sell_price" v-text="img.designer"></span>
        					        <span class="market_price">找他设计</span>
        					    </div>
        					</a>

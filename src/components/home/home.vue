@@ -40,10 +40,10 @@
     </div>
 </template>
 <script>
-     import productItems from '../../components/common/productitems.vue';
+     //import productItems from '../../components/common/productitems.vue';
      export default {
             components:{
-              productItems:productItems
+              productItems:() => import('../../components/common/productitems.vue'),
             },
 
             mounted(){
@@ -130,6 +130,8 @@
     color: #fff; 
 }
 .design-style-container .design-style_wrapper li img {
+  min-height: 70px;
+  min-width: 70px;
 	width: 80%;
 }
 

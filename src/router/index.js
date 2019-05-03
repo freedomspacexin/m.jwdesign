@@ -1,20 +1,20 @@
-import Vue from 'vue'
-import Router from 'vue-router'
-import Home from '@/components/home/home.vue';
-import Category from '@/components/category/category.vue';
-import CategoryItems from '@/components/category/categoryitems.vue';
-import CategoryGrides from '@/components/category/categorygride.vue';
-import CategoryCurtain from '@/components/category/categorycurtain.vue';
-import Activity from '@/components/activity/activity.vue';
-import Cart from '@/components/cart/cart.vue';
-import Personal from '@/components/personal/personalcenter.vue';
-import ProductDetail from '@/components/products/productdetail.vue';
-import DesignDetail from '@/components/products/designdetail.vue';
-import BooksDesign from '@/components/books/books.vue';
+//import Vue from 'vue'
+//import Router from 'vue-router'
+const Home = r => require(['@/components/home/home.vue'],r);
+const Category = r => require(['@/components/category/category.vue'],r);
+const CategoryItems = r => require(['@/components/category/categoryitems.vue'],r);
+const CategoryGrides = r => require(['@/components/category/categorygride.vue'],r);
+const CategoryCurtain = r => require(['@/components/category/categorycurtain.vue'],r);
+const Activity = r => require(['@/components/activity/activity.vue'],r);
+const Cart = r => require(['@/components/cart/cart.vue'],r);
+const Personal = r => require(['@/components/personal/personalcenter.vue'],r);
+const ProductDetail = r => require(['@/components/products/productdetail.vue'],r);
+const DesignDetail = r => require(['@/components/products/designdetail.vue'],r);
+const BooksDesign = r => require(['@/components/books/books.vue'],r);
 
-Vue.use(Router)
+Vue.use(VueRouter)
 
-export default new Router({
+export default new VueRouter({
   linkActiveClass:'mui-active',
   routes: [
     {path:'/', redirect:'/home' },
